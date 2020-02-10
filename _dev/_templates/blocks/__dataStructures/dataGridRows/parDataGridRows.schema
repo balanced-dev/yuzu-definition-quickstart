@@ -1,0 +1,33 @@
+{
+    "id": "/parDataGridRows",
+    "type": "object",
+    "additionalProperties": false,
+    "anyOfTypes": [
+        "parSectionGrid"
+    ],
+    "properties": {
+        "rows": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "config": {
+                        "anyOf": [
+                            {
+                                "$ref": "/parSectionGridConfig"
+                            }
+                        ]
+                    },
+                    "items": {
+                        "anyOf": [
+                            {
+                                "$ref": "/parSectionGridItems"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,8 @@
+<fieldset class="{{_modifiers.[0]}}__checkbox-radio-list">
+	{{#if legend}}
+		<legend class="{{_modifiers.[0]}}__checkbox-radio-list__legend">{{legend}}</legend>
+	{{/if}}
+	{{#each elements}}
+		{{{ modPartial 'parFormCheckboxRadio' this ../_modifiers.[0] }}}
+	{{/each}}
+</fieldset>

@@ -1,0 +1,13 @@
+{
+	"id": "/parDataImage",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"src": {
+			"type": "string"
+		},
+		"alt": {
+			"type": "string"
+		}
+	}
+}

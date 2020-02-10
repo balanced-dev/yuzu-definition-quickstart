@@ -1,0 +1,16 @@
+<label class="{{_modifiers.[0]}}__select">
+	<span class="{{_modifiers.[0]}}__select__label">{{label}}</span>
+	<div class="{{_modifiers.[0]}}__select__input">
+		<select class="{{_modifiers.[0]}}__select__control" 
+			{{#if id}}id="{{id}}"{{/if}} 
+			{{#if name}}name="{{name}}"{{/if}} 
+			{{#if isRequired}}required="required"{{/if}}
+			{{#if isDisabled}}disabled="disabled"{{/if}}
+		>
+			{{#each options}}
+				<option {{#if ../isReadonly}} disabled="disabled"{{/if}}{{#if option.isSelected}} selected="selected"{{/if}} value="{{option.value}}">{{option.label}}</option>
+			{{/each}}
+		</select>
+		<span class="{{_modifiers.[0]}}__select__faux"></span>
+	</div>
+</label>

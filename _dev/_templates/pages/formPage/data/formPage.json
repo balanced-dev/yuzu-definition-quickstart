@@ -1,0 +1,154 @@
+{
+    "form": {
+        "testForm": {
+            "title": "Login",
+            "isSuccess": false,
+            "successMessage": "Form submitted!",
+            "fieldsets": [
+                {
+                    "legend": "Personal Details",
+                    "fields": [
+                        {
+                            "type": "email",
+                            "name": "emailAddress",
+                            "placeholder": "Email address",
+                            "label": "Email address",
+                            "value": "",
+                            "isRequired": true,
+                            "_ref": "/parFormTextInput"
+                        },
+                        {
+                            "type": "password",
+                            "name": "password",
+                            "placeholder": "Password",
+                            "label": "Password",
+                            "isRequired": true,
+                            "_ref": "/parFormTextInput"
+                        },
+                        {
+                            "label": "Form Select Label",
+                            "name": "select",
+                            "id": "",
+                            "isRequired": false,
+                            "isDisabled": false,
+                            "isReadonly": false,
+                            "options": [
+                                {
+                                    "option": {
+                                        "isSelected": true,
+                                        "value": "1",
+                                        "label": "Option 1"
+                                    }
+                                },
+                                {
+                                    "option": {
+                                        "value": "2",
+                                        "label": "Option 2"
+                                    }
+                                },
+                                {
+                                    "option": {
+                                        "value": "3",
+                                        "label": "Option 3"
+                                    }
+                                },
+                                {
+                                    "option": {
+                                        "value": "4",
+                                        "label": "Option 4"
+                                    }
+                                },
+                                {
+                                    "option": {
+                                        "value": "5",
+                                        "label": "Option 5"
+                                    }
+                                }
+                            ],
+                            "_ref": "/parFormSelect"
+                        },
+                        {
+                            "legend": "Radios",
+                            "elements": [
+                                {
+                                    "type": "radio",
+                                    "name": "radio",
+                                    "label": "radio Label",
+                                    "value": "radio Value",
+                                    "id": "",
+                                    "isRequired": true,
+                                    "isSelected": false,
+                                    "isDisabled": false,
+                                    "isReadonly": false,
+                                    "_ref": "/parFormCheckboxRadio"
+                                },
+                                {
+                                    "type": "radio",
+                                    "name": "radio",
+                                    "label": "radio Label",
+                                    "value": "radio Value 2",
+                                    "id": "",
+                                    "isRequired": true,
+                                    "isSelected": false,
+                                    "isDisabled": false,
+                                    "isReadonly": false,
+                                    "_ref": "/parFormCheckboxRadio"
+                                }
+                            ],
+                            "_ref": "/parFormCheckboxRadioList"
+                        },
+                        {
+                            "legend": "Checkboxes",
+                            "elements": [
+                                {
+                                    "type": "checkbox",
+                                    "name": "checkbox",
+                                    "label": "checkbox Label",
+                                    "value": "checkbox Value",
+                                    "id": "",
+                                    "isRequired": true,
+                                    "isSelected": true,
+                                    "isDisabled": false,
+                                    "isReadonly": false,
+                                    "_ref": "/parFormCheckboxRadio"
+                                },
+                                {
+                                    "type": "checkbox",
+                                    "name": "checkbox",
+                                    "label": "checkbox Label",
+                                    "value": "checkbox Value 2",
+                                    "id": "",
+                                    "isRequired": true,
+                                    "isSelected": false,
+                                    "isDisabled": false,
+                                    "isReadonly": false,
+                                    "_ref": "/parFormCheckboxRadio"
+                                }
+                            ],
+                            "_ref": "/parFormCheckboxRadioList"
+                        }
+                    ]
+                }
+            ],
+            "submitButtonText": "Login",
+            "actionLinks": [
+                {
+                    "label": "Forgotten password?",
+                    "href": "#",
+                    "title": ""
+                },
+                {
+                    "label": "Not got an account?",
+                    "href": "#",
+                    "title": ""
+                },
+                {
+                    "label": "Not got an account?",
+                    "href": "#",
+                    "title": ""
+                }
+            ],
+            "_ref": "/parFormBuilder"
+        }
+    }
+}
