@@ -22,6 +22,12 @@
         "placeholder": {
             "type": "string"
         },
+        "isRequired": {
+            "type": "boolean"
+        },
+        "requiredMessage": {
+            "type": "string"
+        },
         "pattern": {
             "type": "string"
         },
@@ -43,14 +49,16 @@
         "maxlength": {
             "type": "string"
         },
-        "isRequired": {
-            "type": "boolean"
-        },
         "isDisabled": {
             "type": "boolean"
         },
         "isReadonly": {
             "type": "boolean"
+        },
+        "config": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {}
         }
     },
     "id": "/parFormTextInput"

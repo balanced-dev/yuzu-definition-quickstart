@@ -1,5 +1,5 @@
 {
-    "id": "/parDataFormBuilder",
+    "id": "/dataFormBuilder",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "description": "",
     "type": "object",
@@ -54,7 +54,7 @@
         "actionLinks": {
             "type": "array",
             "items": {
-                "$ref": "/parDataLink"
+                "$ref": "/dataLink"
             }
         }
     }

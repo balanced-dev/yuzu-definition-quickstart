@@ -1,9 +1,9 @@
 {
-    "id": "/parDataGridRows",
+    "id": "/dataRows",
     "type": "object",
     "additionalProperties": false,
     "anyOfTypes": [
-        "parSectionGrid"
+        "parRowBuilder"
     ],
     "properties": {
         "rows": {
@@ -15,14 +15,14 @@
                     "config": {
                         "anyOf": [
                             {
-                                "$ref": "/parSectionGridConfig"
+                                "$ref": "/parRowBuilderConfig"
                             }
                         ]
                     },
                     "items": {
                         "anyOf": [
                             {
-                                "$ref": "/parSectionGridItems"
+                                "$ref": "/parRowBuilderItems"
                             }
                         ]
                     }

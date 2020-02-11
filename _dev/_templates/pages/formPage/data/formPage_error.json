@@ -2,11 +2,10 @@
     "form": {
         "testForm": {
             "title": "Login",
-            "isSuccess": false,
+            "isSuccess": false,            
             "successMessage": "Form submitted!",
             "fieldsets": [
                 {
-                    "legend": "Personal Details",
                     "fields": [
                         {
                             "type": "email",
@@ -27,7 +26,11 @@
                         }
                     ]
                 }
-            ],
+            ], 
+            "validation": {
+                "title": "An error occured",
+                "message": "<div class=\"validation-summary-errors\"><ul><li>The email address must be valid</li>\r\n</ul></div>"
+            },
             "submitButtonText": "Login",
             "actionLinks": [
                 {

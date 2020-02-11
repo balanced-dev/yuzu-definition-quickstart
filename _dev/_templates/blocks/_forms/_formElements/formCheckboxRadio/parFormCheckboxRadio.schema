@@ -18,8 +18,14 @@
         "id": {
             "type": "string"
         },
+        "checkboxRadioListId": {
+            "type": "string"
+        },
         "isRequired": {
             "type": "boolean"
+        },
+        "requiredMessage": {
+            "type": "string"
         },
         "isSelected": {
             "type": "boolean"
@@ -29,6 +35,14 @@
         },
         "isReadonly": {
             "type": "boolean"
+        },
+        "isOneOfSet": {
+            "type": "boolean"
+        },
+        "config": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {}
         }
     },
     "additionalProperties": false,

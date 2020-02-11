@@ -1,12 +1,11 @@
 {
     "form": {
         "testForm": {
-            "title": "Login",
-            "isSuccess": false,
-            "successMessage": "Form submitted!",
+            "title": "Change email address",
+            "isSuccess": false,            
+            "successMessage": "Email changed succesfully!",
             "fieldsets": [
                 {
-                    "legend": "Personal Details",
                     "fields": [
                         {
                             "type": "email",
@@ -16,27 +15,14 @@
                             "value": "",
                             "isRequired": true,
                             "_ref": "/parFormTextInput"
-                        },
-                        {
-                            "type": "password",
-                            "name": "password",
-                            "placeholder": "Password",
-                            "label": "Password",
-                            "isRequired": true,
-                            "_ref": "/parFormTextInput"
                         }
                     ]
                 }
             ],
-            "submitButtonText": "Login",
+            "submitButtonText": "Update",
             "actionLinks": [
                 {
-                    "label": "Forgotten password?",
-                    "href": "#",
-                    "title": ""
-                },
-                {
-                    "label": "Not got an account?",
+                    "label": "Cancel",
                     "href": "#",
                     "title": ""
                 }

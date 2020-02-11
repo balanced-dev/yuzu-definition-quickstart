@@ -28,11 +28,19 @@
         "isRequired": {
             "type": "boolean"
         },
+        "requiredMessage": {
+            "type": "string"
+        },
         "isDisabled": {
             "type": "boolean"
         },
         "isReadonly": {
             "type": "boolean"
+        },
+        "config": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {}
         }
     },
     "id": "/parFormTextArea"

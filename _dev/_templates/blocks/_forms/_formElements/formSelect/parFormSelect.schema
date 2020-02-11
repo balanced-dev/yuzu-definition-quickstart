@@ -15,6 +15,9 @@
         "isRequired": {
             "type": "boolean"
         },
+        "requiredMessage": {
+            "type": "string"
+        },
         "isDisabled": {
             "type": "boolean"
         },
@@ -25,23 +28,27 @@
             "type": "array",
             "items": {
                 "type": "object",
+                "additionalProperties": false,
                 "properties": {
-                    "option": {
-                        "type": "object",
-                        "properties": {
-                            "isSelected": {
-                                "type": "boolean"
-                            },
-                            "value": {
-                                "type": "string"
-                            },
-                            "label": {
-                                "type": "string"
-                            }
-                        }
+                    "isSelected": {
+                        "type": "boolean"
+                    },
+                    "isDisabled": {
+                        "type": "boolean"
+                    },
+                    "value": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
                     }
                 }
             }
+        },
+        "config": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {}
         }
     },
     "additionalProperties": false,

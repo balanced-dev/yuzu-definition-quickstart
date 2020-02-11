@@ -5,6 +5,9 @@
     "items": {
         "anyOf": [
             {
+                "$ref": "/parFormButton"
+            },
+            {
                 "$ref": "/parFormCheckboxRadio"
             },
             {
@@ -15,10 +18,19 @@
             },
             {
                 "$ref": "/parFormTextInput"
-            },            
+            },
             {
                 "$ref": "/parFormSelect"
-            }            
+            },
+            {
+                "$ref": "/parFormHidden"
+            },
+            {
+                "$ref": "/parRecaptcha"
+            },
+            {
+                "$ref": "/parTitleAndDescription"
+            }
         ]
     },
     "additionalProperties": false,

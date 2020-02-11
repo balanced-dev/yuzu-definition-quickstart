@@ -1,5 +1,5 @@
 {
-	"id": "/parDataImage",
+	"id": "/dataImage",
 	"type": "object",
 	"additionalProperties": false,
 	"properties": {

@@ -8,10 +8,12 @@
 		{{#if placeholder}}placeholder="{{placeholder}}"{{/if}} 
 		{{#if value}}value="{{value}}"{{/if}}
 
-		{{#if pattern}}pattern="{{pattern}}"{{/if}}
-		{{#if patternMessage}}data-bouncer-message="{{patternMessage}}"{{/if}}
-
 		{{#if isRequired}}required="required"{{/if}}
+		{{#if requiredMessage}}data-msg-required="{{requiredMessage}}"{{/if}}
+
+		{{#if pattern}}pattern="{{pattern}}"{{/if}}
+		{{#if patternMessage}}data-msg-regex="{{patternMessage}}"{{/if}}
+
 		{{#if isReadonly}}readonly="readonly"{{/if}}
 		{{#if isDisabled}}disabled="disabled"{{/if}}
 

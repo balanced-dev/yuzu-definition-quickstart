@@ -1,23 +1,13 @@
 {
+    "id": "/parTitleAndDescription",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "description": "",
-    "id": "/parFormButton",
     "type": "object",
-    "additionalProperties": false,
     "properties": {
-        "label": {
+        "title": {
             "type": "string"
         },
-        "id": {
-            "type": "string"
-        },
-        "type": {
-            "type": "string"
-        },
-        "name": {
-            "type": "string"
-        },
-        "value": {
+        "description": {
             "type": "string"
         },
         "config": {
@@ -25,5 +15,6 @@
             "additionalProperties": true,
             "properties": {}
         }
-    }
+    },
+    "additionalProperties": false
 }
