@@ -27,6 +27,9 @@ paths = {
 		layout: {
 			src: base.devTemplates + '/_layouts/'
 		},
+		dataStuctures: {
+			src: base.devTemplates + '/_dataStructures/'
+		},
 		blocks: {
 			src: base.devTemplates + '/blocks/'
 		},
@@ -81,7 +84,7 @@ files = {
 	templateLayoutData: paths.handlebars.data.layout + 'layout.json',
 	templateLayouts: paths.handlebars.layout.src,
 	templateData: paths.handlebars.data.templates,
-	templatePartials: paths.handlebars.blocks.src,
+	templatePartials: [paths.handlebars.dataStuctures.src, paths.handlebars.blocks.src],
 	templates: paths.handlebars.templates.src,
 	templateHTML: paths.handlebars.templates.dest,
   	html: paths.handlebars.templates.dest+ '**/*.html'

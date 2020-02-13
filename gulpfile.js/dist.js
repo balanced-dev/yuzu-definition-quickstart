@@ -94,7 +94,7 @@ const distSchemaLayouts = () => {
 
 const distSchemaBlocks = () => {
 
-	return gulp.src(files.templates + '/blocks/**/*.schema')
+	return gulp.src(files.templates + '/blocks/**/*.schema', files.templates + '/_dataStructures/**/*.schema')
 		.pipe($.yuzuDefinitionCore.gulpSchema(files.templatePartials, true))
 		.pipe($.flatten())
 		.pipe(gulp.dest(paths.handlebars.schema.dist +'/blocks'));

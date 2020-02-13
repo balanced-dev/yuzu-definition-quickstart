@@ -11,7 +11,6 @@ const clearTemplateOutput = () => {
 };
 
 const renderTemplates = () => {
-
 	return gulp.src(files.templates + '/**/*.json')
 		.pipe(yuzu.gulpBuild(files.templatePartials, $.yuzuDefinitionHbsHelpers, paths.handlebars.data.layout))
 		.pipe($.rename(function (path) {
