@@ -2,7 +2,7 @@
     "form": {
         "testForm": {
             "title": "Login",
-            "isSuccess": false,            
+            "isSuccess": false,
             "successMessage": "Form submitted!",
             "fieldsets": [
                 {
