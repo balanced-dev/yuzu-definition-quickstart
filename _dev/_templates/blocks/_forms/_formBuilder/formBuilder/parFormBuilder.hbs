@@ -23,7 +23,7 @@
             {{#each fieldsets}}
                 <fieldset class="form__fieldset">
                     {{#if legend}}
-                        <legend class="form__fieldset__legend">{{legend}}</legend class="form__fieldset">
+                        <legend class="form__fieldset__legend">{{legend}}</legend>
                     {{/if}}
                     {{#each fields}}
                         {{#if _ref }}
@@ -39,7 +39,6 @@
                     {{submitButtonText}}
                 </button>
             {{/if~}}
-
             {{~#if actionLinks.[0]}}
                 <div class="form__links">
                     {{#each actionLinks}}

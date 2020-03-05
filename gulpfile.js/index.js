@@ -21,10 +21,9 @@ gulp_src = gulp.src;
 gulp.src = function() {
 	return gulp_src.apply(gulp, arguments)
 		.pipe($.plumber(function(error) {
+			let message = typeof(error) === 'string' ? error : '('+ error.plugin + '): ' + error.message;
 			// Output an error message
-			$.fancyLog.error($.ansiColors.bold($.ansiColors.bgRed(' ERROR ') + $.ansiColors.red(' ('+ error.plugin + '): ' + error.message)));
-			// emit the end event, to properly end the task
-			this.emit('end');
+			$.fancyLog.error($.ansiColors.bold($.ansiColors.bgRed(' ERROR ') + ' ' + $.ansiColors.red(message)));
 		}));
 };
 
