@@ -11,6 +11,15 @@
 		},
 		"title": {
 			"type": "string"
+		},
+		"isNewTab": {
+			"type": "string"
+		},
+		"isExternalLink": {
+			"type": "string"
+		},
+		"iconName": {
+			"type": "string"
 		}
 	}
 }
