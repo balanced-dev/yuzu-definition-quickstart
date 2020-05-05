@@ -68,6 +68,10 @@ paths = {
 		src: base.devSource + '/styles/scss',
 		dest: base.devCompiled + '/styles/',
 		dist: base.distClient + '/styles/'
+	},
+	yuzuDefUi: {
+		src: base.devRoot + '/yuzu-def-ui',
+		dist: base.distRoot+ '/yuzu-def-ui'
 	}
 };
 

@@ -18,6 +18,8 @@ const distJs = () => {
 const distInventory = () => {
     gulp.src([base.devCompiled + '/**/*', '!'+ paths.styles.dest + '/**/*', '!'+ paths.js.dest + '/scripts*.js'])
         .pipe(gulp.dest(base.distClient));
+    gulp.src(paths.yuzuDefUi.src + '/**/*')
+        .pipe(gulp.dest(paths.yuzuDefUi.dist));
     return gulp.src(base.devRoot + '/templates.html')
         .pipe(gulp.dest(base.distRoot));
 };
