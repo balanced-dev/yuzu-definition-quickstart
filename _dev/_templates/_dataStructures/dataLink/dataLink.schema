@@ -13,13 +13,16 @@
 			"type": "string"
 		},
 		"isNewTab": {
-			"type": "string"
+			"type": "boolean"
 		},
 		"isExternalLink": {
-			"type": "string"
+			"type": "boolean"
 		},
 		"iconName": {
 			"type": "string"
+		},
+		"isActive": {
+			"type": "boolean"
 		}
 	}
 }
