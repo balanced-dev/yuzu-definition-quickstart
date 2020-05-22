@@ -32,6 +32,6 @@
     "yuzu-definition-api": "^1.1.2",
     "yuzu-definition-core": "^1.3.3",
     "yuzu-definition-hbs-helpers": "^1.1.9",
-    "yuzu-definition-ui": "^1.1.2"
+    "yuzu-definition-ui": "^1.1.3"
   }
 }
