@@ -2,7 +2,7 @@ const gulp = require('gulp');
 const paths = require('./config').paths; 
 const files = require('./config').files; 
 const distCss = () => {
-    return gulp.src(paths.styles.dest + '/**/*')
+    return gulp.src(paths.styles.dest + '/**/*.css')
         .pipe($.stripCssComments({
             all: true
         }))
