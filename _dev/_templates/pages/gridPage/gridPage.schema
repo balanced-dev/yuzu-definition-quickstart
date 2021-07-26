@@ -7,7 +7,7 @@
     "properties": {
         "content": {
             "$ref": "/dataGrid",
-            "anyOfType": "parGrid"
+            "anyOfType": "parGridBuilder"
         }
     }
 }
