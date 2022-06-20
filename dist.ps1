@@ -26,8 +26,5 @@ function Update-Script {
 
 }
 
-Update-Script -FilePattern 'websiteScripts.*js' -ViewPath '..\delivery.src\{ProjectName}\Views\master.cshtml'
-Update-Script -FilePattern 'frontendStyle.*css' -ViewPath '..\delivery.src\{ProjectName}\Views\master.cshtml'
-
-Update-Script -FilePattern 'screensScripts.*js' -ViewPath '..\delivery.src\{ProjectName}\Views\signageMaster.cshtml'
-Update-Script -FilePattern 'screenFrontendStyle.*css' -ViewPath '..\delivery.src\{ProjectName}\Views\signageMaster.cshtml'
+Update-Script -FilePattern 'scripts.*js' -ViewPath '..\delivery.src\{ProjectName}\Views\master.cshtml'
+Update-Script -FilePattern 'styles.*css' -ViewPath '..\delivery.src\{ProjectName}\Views\master.cshtml'

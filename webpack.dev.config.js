@@ -2,6 +2,7 @@ const config = require('./webpack.common.config');
 const yuzuApi = require('yuzu-definition-api');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
+const yuzuPlugins = require('yuzu-definition-webpack-plugins');
 
 config.mode = 'development';
 config.devtool = 'source-map';
@@ -15,7 +16,6 @@ config.devServer = {
         "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
         "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
     },
-    //stats: 'errors-only',
     watchOptions: {
         poll: true
     },
@@ -23,12 +23,12 @@ config.devServer = {
         app.use('/api/', yuzuApi);
     }
 };
-config.resolve.alias.vue = 'vue/dist/vue.js';
 config.plugins.push(
     new MiniCssExtractPlugin({
         filename: './_client/styles/[name].css'
     }),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.NoEmitOnErrorsPlugin(),
+    new yuzuPlugins.TemplatePaths()
 );
 
 config.entry.yuzu.push(`webpack-dev-server-status-bar`);

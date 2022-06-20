@@ -32,9 +32,11 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-dev-server-status-bar": "^1.1.2",
     "webpack-import-glob-loader": "^1.6.3",
-    "yuzu-definition-api": "2.0.0-beta.0",
-    "yuzu-definition-core": "^2.0.0-beta.6",
-    "yuzu-definition-hbs-helpers": "^1.1.12",
-    "yuzu-definition-ui": "2.0.0-beta.1"
+    "yuzu-definition-api": "2.0.0",
+    "yuzu-definition-core": "^2.0.0",
+    "yuzu-definition-hbs-helpers": "^1.1.16",
+    "yuzu-definition-ui": "2.0.0",
+    "yuzu-loader": "2.0.0",
+    "yuzu-definition-webpack-plugins": "2.0.0"
   }
 }

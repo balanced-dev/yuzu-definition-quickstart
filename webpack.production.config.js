@@ -2,20 +2,20 @@ const config = require('./webpack.common.config');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const webpack = require('webpack');
-const YuzuDist = require('./plugins/YuzuDist');
+const yuzuPlugins = require('yuzu-definition-webpack-plugins');
 
 config.mode = 'production';
 
-config.output.filename = './_client/scripts/[name].[contenthash].js';
-config.resolve.alias.vue = 'vue/dist/vue.min.js';
+config.output.filename = './_client/script/[name].[contenthash].js';
 config.plugins.push(
     new MiniCssExtractPlugin({
-        filename: './_client/styles/[name].[contenthash].css'
+        filename: './_client/style/[name].[contenthash].css'
     }),
     new MiniCssExtractPlugin({
-        filename: './_client/styles/[name].css'
+        filename: './_client/style/[name].css'
     }),
-    new YuzuDist(),
+    new yuzuPlugins.TemplatePaths('yuzu.html'),
+    new yuzuPlugins.Dist(),
     new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production')
     })

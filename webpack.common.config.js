@@ -7,8 +7,6 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const globImporter = require('node-sass-glob-importer');
 
-const YuzuTemplatePaths = require('./plugins/YuzuTemplatePaths');
-
 files = {
     templates: './_dev/_templates/',
     templateHTML: './_dev/_templates/'
@@ -78,9 +76,7 @@ module.exports = {
                 test: /\.json$/,
                 use: [
                     'html-loader',
-                    {
-                        loader: path.resolve(__dirname, './loaders/yuzu-loader.js')
-                    }
+                    'yuzu-loader'
                 ]
             },
             {
@@ -126,7 +122,6 @@ module.exports = {
                     to: path.resolve(__dirname, 'dist', '_client', 'images')
                 }
             ]
-        }),
-        new YuzuTemplatePaths()
+        })
     ]
 }
