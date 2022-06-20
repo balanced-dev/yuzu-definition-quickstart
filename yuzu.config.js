@@ -1,3 +1,5 @@
+const yuzuHelpers = require('yuzu-definition-hbs-helpers');
+
 module.exports = {
     blockDependenciesTimeout: 1000,
     hbsHelpers: yuzuHelpers,
