@@ -9,7 +9,7 @@ config.devtool = 'source-map';
 config.devServer = {
     index: 'yuzu.html',
     port: 3000,
-    host: '0.0.0.0',
+    host: 'localhost',
     disableHostCheck: true,
     headers: {
         "Access-Control-Allow-Origin": "*",
