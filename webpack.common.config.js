@@ -5,7 +5,7 @@ const HtmlWepackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const CopyPlugin = require('copy-webpack-plugin');
-const globImporter = require('sass-glob-importer');
+const globImporter = require('node-sass-glob-importer');
 
 files = {
     templates: './_dev/_templates/',
