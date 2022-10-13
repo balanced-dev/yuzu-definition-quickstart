@@ -4,7 +4,7 @@ $is-backend: false;
 //              Bootstrap
 //
 // ======================================
-@import 'bootstrap/bootstrap.scss';
+@import '~bootstrap-scss/bootstrap.scss'; // TODO: Webpack 5, drop leading tilde
 
 // =======================================
 //
