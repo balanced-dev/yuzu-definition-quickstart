@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack --config webpack.production.config.js",
-    "dist": "webpack --config webpack.production.config.js && Powershell.exe -executionpolicy remotesigned -File dist.ps1",
-    "serve": "webpack-dev-server --config webpack.dev.config.js"
+    "build": "webpack --config webpack.production.js",
+    "dist": "webpack --config webpack.production.js && Powershell.exe -executionpolicy remotesigned -File dist.ps1",
+    "serve": "webpack-dev-server --config webpack.dev.js"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
