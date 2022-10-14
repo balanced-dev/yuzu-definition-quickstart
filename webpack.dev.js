@@ -1,36 +1,70 @@
-const config = require('./webpack.common');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.common');
+const path = require('path');
 const yuzuApi = require('yuzu-definition-api');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const globImporter = require('node-sass-glob-importer');
 const webpack = require('webpack');
 const yuzuPlugins = require('yuzu-definition-webpack-plugins');
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWepackPlugin = require('html-webpack-plugin');
 
-config.mode = 'development';
-config.devtool = 'source-map';
-config.devServer = {
-    index: 'yuzu.html',
-    port: 3000,
+module.exports = merge(common, {
+  mode: 'development',
+  devtool: 'inline-source-map',
+  devServer: {
     host: 'localhost',
+    port: 3000,
+    hot: true,
     disableHostCheck: true,
     headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
-        "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
     },
     watchOptions: {
-        poll: true
+      poll: true
     },
-    before:(app) => {
-        app.use('/api/', yuzuApi);
+    before: (app) => {
+      app.use('/api/', yuzuApi);
     }
-};
-config.plugins.push(
-    new MiniCssExtractPlugin({
-        filename: './_client/styles/[name].css'
-    }),
+  },
+  entry: {
+    yuzu: ['webpack-dev-server-status-bar']
+  },
+  module: {
+    rules: [{
+      test: /\.scss$/,
+      use: [
+        'style-loader',
+        'css-loader',
+        'postcss-loader',
+        {
+          loader: 'sass-loader',
+          options: {
+            sassOptions: {
+              importer: globImporter()
+            }
+          }
+        }
+      ]
+    }]
+  },
+  plugins: [
     new webpack.NoEmitOnErrorsPlugin(),
-    new yuzuPlugins.TemplatePaths()
-);
-
-config.entry.yuzu.push(`webpack-dev-server-status-bar`);
-
-module.exports = config;
+    new yuzuPlugins.TemplatePaths({
+      rootPath: ''
+    }),
+    new CopyPlugin({
+      patterns: [{
+        context: path.resolve(__dirname, '_dev', 'yuzu-def-ui'),
+        from: '**/*',
+        to: 'yuzu-def-ui'
+      }]
+    }),
+    new HtmlWepackPlugin({
+      title: 'Yuzu Pattern Library',
+      chunks: ['scripts', 'styles', 'yuzu'],
+      template: './_dev/index.template.html'
+    })
+  ]
+});
