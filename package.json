@@ -1,11 +1,15 @@
 {
-  "name": "{ProjectName}",
+  "name": "{ProjectName:kebab}",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "webpack --config webpack.production.config.js",
-    "dist": "webpack --config webpack.production.config.js && Powershell.exe -executionpolicy remotesigned -File dist.ps1",
-    "serve": "webpack-dev-server --config webpack.dev.config.js"
+    "build": "webpack --config webpack.production.js",
+    "dist": "webpack --config webpack.production.js --env.output=../delivery.src/{ProjectName}/",
+
+    "dev": "webpack-dev-server --config webpack.dev.js",
+    "dev:inspect": "node --inspect ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.dev.js",
+
+    "serve": "npm run dev"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -33,11 +37,12 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-dev-server-status-bar": "^1.1.2",
     "webpack-import-glob-loader": "^1.6.3",
+    "webpack-merge": "^5.8.0",
     "yuzu-definition-api": "2.0.0",
     "yuzu-definition-core": "^2.0.0",
     "yuzu-definition-hbs-helpers": "^1.1.16",
     "yuzu-definition-ui": "2.0.0",
-    "yuzu-definition-webpack-plugins": "2.0.0",
+    "yuzu-definition-webpack-plugins": "3.0.0",
     "yuzu-loader": "2.0.0"
   }
 }
