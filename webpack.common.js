@@ -25,6 +25,7 @@ module.exports = {
     alias: {
       vueFiles: path.join(__dirname, '/_dev/_templates/blocks/'),
       libraryScripts: path.join(__dirname, '/_dev/_source/js/'),
+      '@images': path.join(__dirname, '/_dev/_source/images/'),
     },
   },
   module: {
