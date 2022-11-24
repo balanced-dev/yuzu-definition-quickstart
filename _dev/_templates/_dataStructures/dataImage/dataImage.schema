@@ -14,6 +14,15 @@
 		},
 		"width": {
 			"type": "integer"
+		},
+		"focalPointLeft": {
+			"type": "string"
+		},
+		"focalPointTop": {
+			"type": "string"
+		},
+		"focalPointLeftTop": {
+			"type": "string"
 		}
 	}
 }
