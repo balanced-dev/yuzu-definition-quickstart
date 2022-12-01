@@ -13,9 +13,9 @@ paths = {
 module.exports = {
   entry: {
     'yuzu': ['./_dev/yuzu.js'],
+    'vendor': './_dev/_source/js/vendor.js',
     'scripts': './_dev/_source/js/scripts.js',
-    'styles': './_dev/_source/styles/scss/frontend.js',
-    'backoffice': './_dev/_source/styles/scss/backoffice.js'
+    'styles': './_dev/_source/styles/scss/frontend.js'
   },
   output: {
     filename: './scripts/[name].js',

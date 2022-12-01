@@ -63,7 +63,7 @@ module.exports = merge(common, {
     }),
     new HtmlWepackPlugin({
       title: 'Yuzu Pattern Library',
-      chunks: ['scripts', 'styles', 'yuzu'],
+      chunks: ['vendor', 'scripts', 'styles', 'yuzu'],
       template: './_dev/index.template.html'
     })
   ]

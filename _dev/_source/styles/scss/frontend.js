@@ -1,1 +1,1 @@
-require('./frontend.scss');
+import './frontend.scss';

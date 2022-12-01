@@ -17,7 +17,7 @@ function addLayoutTemplateFilePlugins(layoutsPath, plugins) {
     const layoutName = path.basename(template).replace('.template.', '.');
     plugins.push(
       new HtmlWepackPlugin({
-        chunks: ['scripts', 'styles'],
+        chunks: ['vendor', 'scripts', 'styles'],
         template: template,
         filename: `${layoutsPath}/${layoutName}`,
         publicPath: '/',
@@ -105,7 +105,7 @@ module.exports = env => {
       }),
       new HtmlWepackPlugin({
         title: 'Yuzu Pattern Library',
-        chunks: ['scripts', 'styles', 'yuzu'],
+        chunks: ['vendor', 'scripts', 'styles', 'yuzu'],
         template: './_dev/index.template.html',
         filename: 'yuzu.html',
         publicPath: '/',
