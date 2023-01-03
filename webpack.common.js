@@ -1,15 +1,4 @@
 const path = require('path');
-files = {
-  templates: './_dev/_templates/',
-  templateHTML: './_dev/_templates/'
-}
-
-paths = {
-  images: {
-    dest: './_dev/_source/images/',
-  }
-}
-
 module.exports = {
   entry: {
     'yuzu': ['./_dev/yuzu.js'],

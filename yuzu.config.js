@@ -9,6 +9,17 @@ module.exports = {
     registeredPartialsDirs: ['./_dev/_templates/blocks/'],
     dependantDirectories: ['./_dev/_templates/_layouts/', './_dev/_templates/blocks/'],
     templatePaths: '\\_client\\templatePaths.json',
+    api: {
+        files : {
+            templates: ['./_dev/_templates/'],
+            templateHTML: './_dev/_templates/'
+        },
+        paths : {
+            images: {
+                dest: './_dev/_source/images/',
+            }
+        }
+    },
     dist: {
         data: './_dev/_templates/**/*.json',
         schema: './_dev/_templates/**/*.schema',
