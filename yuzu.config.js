@@ -1,8 +1,6 @@
-const yuzuHelpers = require('yuzu-definition-hbs-helpers');
-
 module.exports = {
     blockDependenciesTimeout: 1000,
-    hbsHelpers: yuzuHelpers,
+    hbsHelpers: [],
     templatesRoot: '_templates',
     renderedPartialDirs: ['./_dev/_templates/blocks/', './_dev/_templates/_dataStructures/'],
     layoutDir: './_dev/_templates/_layouts/',
@@ -45,5 +43,6 @@ module.exports = {
                 "type": "string"
             }
         }
-    ]
+    ],
+    plugins: []
 };
